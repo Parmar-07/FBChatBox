@@ -1,11 +1,49 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="headerBoldWhite" parent="Widget.AppCompat.TextView">
+        <item name="android:font" tools:targetApi="o">@font/comfortaa_bold</item>
+        <item name="android:textColor" >@color/colorAccent</item>
+        <item name="android:textSize" >22sp</item>
+    </style>
+
+    <style name="headerMediumWhite" parent="Widget.AppCompat.TextView">
+        <item name="android:font" tools:targetApi="o">@font/comfortaa_medium</item>
+        <item name="android:textColor" >@color/colorAccent</item>
+        <item name="android:textSize" >18sp</item>
+    </style>
+
+    <style name="editTextReqular" parent="Widget.AppCompat.EditText">
+        <item name="android:font" tools:targetApi="o">@font/comfortaa_regular</item>
+        <item name="android:textColor" >@color/colorAccent</item>
+        <item name="android:textColorHint" >@color/colorAccent</item>
+        <item name="android:backgroundTint" >@color/colorAccent</item>
+        <item name="android:importantForAutofill" tools:targetApi="o">no</item>
+        <item name="android:textSize" >18sp</item>
+    </style>
+
+<!--
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:hint="@string/email"
+        android:fontFamily="@font/comfortaa_regular"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@id/rightMargin"
+        app:layout_constraintStart_toEndOf="@id/leftMargin"
+        app:layout_constraintTop_toBottomOf="@id/lbl_header"
+        tools:ignore="LabelFor,TextFields" />-->
+
 
 </resources>

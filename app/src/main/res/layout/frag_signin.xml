@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:paddingBottom="20dp"
+    tools:context=".CredentialSetup">
+
+    <TextView
+        android:id="@+id/lbl_SignIn"
+        style="@style/headerMediumWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/lblSignIn"
+        app:layout_constraintBottom_toTopOf="@+id/userEmail"
+        tools:text="Sign-In" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftMargin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightMargin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+    <EditText
+        android:id="@+id/userEmail"
+        style="@style/editTextReqular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="text|textNoSuggestions"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toTopOf="@+id/userPassword"
+        app:layout_constraintEnd_toStartOf="@id/rightMargin"
+        app:layout_constraintStart_toEndOf="@id/leftMargin"
+        app:layout_constraintTop_toBottomOf="@id/lbl_SignIn"
+        tools:ignore="LabelFor,TextFields" />
+
+    <EditText
+        android:id="@+id/userPassword"
+        style="@style/editTextReqular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword|textNoSuggestions"
+
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toStartOf="@id/rightMargin"
+        app:layout_constraintStart_toEndOf="@id/leftMargin"
+        app:layout_constraintTop_toBottomOf="@id/userEmail"
+        app:layout_constraintBottom_toTopOf="@id/btnSignIn"
+        tools:ignore="LabelFor,TextFields" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@id/rightMargin"
+        app:layout_constraintStart_toEndOf="@id/leftMargin"
+        android:textAllCaps="false"
+        android:text="@string/btnSignIn"
+        app:layout_constraintTop_toBottomOf="@id/userPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="SignIn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
