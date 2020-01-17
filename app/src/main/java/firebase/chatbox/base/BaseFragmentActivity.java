@@ -1,19 +1,19 @@
-package firebase.chatbox;
+package firebase.chatbox.base;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public abstract class BaseFragmentActivity extends BaseActivity {
+public abstract class BaseFragmentActivity<presenter extends BasePresenter> extends BaseActivity<presenter> implements BaseView {
 
     private FragmentManager fragmentManager;
 
     @Override
-    void initData() {
+    protected void initData() {
         fragmentManager = this.getSupportFragmentManager();
     }
 
-    abstract int getFragmentContainerView();
+   protected abstract int getFragmentContainerView();
 
     private void removePreviousIfExists() {
 
