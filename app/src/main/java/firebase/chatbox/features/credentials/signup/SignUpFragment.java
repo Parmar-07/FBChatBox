@@ -6,6 +6,7 @@ import android.widget.EditText;
 
 import firebase.chatbox.R;
 import firebase.chatbox.base.BaseFragment;
+import firebase.chatbox.data.local.AppCache;
 import firebase.chatbox.presenter.SignUpPresenter;
 import firebase.chatbox.view.SignUpView;
 
@@ -53,6 +54,9 @@ public class SignUpFragment extends BaseFragment<SignUpPresenter> implements Sig
 
     @Override
     public void onSuccessSignUp() {
-        popMessage("DO FIRE-BASE CALL");
+        popMessage(getAppCache().getStringCache(AppCache.USER_NAME)
+                + "\n"
+                + getAppCache().getStringCache(AppCache.USER_ID)
+        );
     }
 }

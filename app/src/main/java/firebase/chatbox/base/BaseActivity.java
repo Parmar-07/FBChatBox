@@ -53,6 +53,7 @@ public abstract class BaseActivity<presenter extends BasePresenter> extends AppC
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Please Wait");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.show();
     }
 

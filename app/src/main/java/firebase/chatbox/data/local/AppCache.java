@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 
 public class AppCache implements IAppCache {
 
+
+
     private static AppCache appCache = null;
     private SharedPreferences prefs;
 

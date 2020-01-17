@@ -15,10 +15,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import firebase.chatbox.FBChatBox;
+import firebase.chatbox.data.local.AppCache;
 
 public abstract class BaseFragment<presenter extends BasePresenter> extends Fragment implements BaseView {
 
     private ProgressDialog progressDialog = null;
+    public AppCache getAppCache(){
+        return FBChatBox.getAppInstance().getAppCache();
+    }
 
     protected abstract int getLayoutView();
 
@@ -67,6 +71,7 @@ public abstract class BaseFragment<presenter extends BasePresenter> extends Frag
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Please Wait");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.show();
     }
 

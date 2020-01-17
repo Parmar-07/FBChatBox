@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "565148426744",
+    "firebase_url": "https://fbchatbox-200e4.firebaseio.com",
+    "project_id": "fbchatbox-200e4",
+    "storage_bucket": "fbchatbox-200e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565148426744:android:8c87c62255210c7f25360d",
+        "android_client_info": {
+          "package_name": "firebase.chatbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565148426744-p90llrusvc2c29e23h7j7si4nthigrhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsb2kQAYJFM5XBxVZ9MR_PNQybIH69izY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565148426744-p90llrusvc2c29e23h7j7si4nthigrhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
