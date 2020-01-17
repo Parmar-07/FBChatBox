@@ -58,7 +58,7 @@ public abstract class BaseFragment<presenter extends BasePresenter> extends Frag
     }
 
     @Override
-    public void popError(String error) {
+    public void popMessage(String error) {
         Toast.makeText(getActivity(), error, Toast.LENGTH_SHORT).show();
     }
 

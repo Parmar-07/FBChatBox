@@ -34,7 +34,9 @@ public class SignInFragment extends BaseFragment<SignInPresenter> implements Sig
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getPresenter().doSignIn(email.getText().toString(), password.getText().toString());
+                getPresenter().doSignIn(
+                        email.getText().toString(),
+                        password.getText().toString());
             }
         });
     }
@@ -51,6 +53,6 @@ public class SignInFragment extends BaseFragment<SignInPresenter> implements Sig
 
     @Override
     public void onSuccessSignIn() {
-        popError("DO FIRE-BASE CALL");
+        popMessage("DO FIRE-BASE CALL");
     }
 }

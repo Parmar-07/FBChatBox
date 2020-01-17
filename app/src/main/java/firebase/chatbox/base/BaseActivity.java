@@ -44,7 +44,7 @@ public abstract class BaseActivity<presenter extends BasePresenter> extends AppC
 
 
     @Override
-    public void popError(String error) {
+    public void popMessage(String error) {
         Toast.makeText(this,error,Toast.LENGTH_SHORT).show();
     }
 

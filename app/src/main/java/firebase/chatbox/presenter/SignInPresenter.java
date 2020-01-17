@@ -20,10 +20,10 @@ public class SignInPresenter extends BasePresenter implements SignInInteractor {
         view.dismissKeyboard();
 
         if (email.isEmpty()) {
-            view.popError("Please Enter Email");
+            view.popMessage("Please Enter Email");
             return false;
         } else if (password.isEmpty()) {
-            view.popError("Please Enter Password");
+            view.popMessage("Please Enter Password");
             return false;
         } else {
             return true;

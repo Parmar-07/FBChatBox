@@ -27,17 +27,5 @@ public class CredentialPresenter extends BasePresenter implements CredentailInte
         } else {
             view.previewSignIn();
         }
-
-//        if (v.getTag().equals("SignIn")) {
-//            loadFragment(new SignUpFragment());
-//            changeCredentials.setText(getString(R.string.existingUser));
-//            changeCredentials.setTag("SignUp");
-//        } else {
-//            loadFragment(new SignInFragment());
-//            changeCredentials.setText(getString(R.string.newUSer));
-//            changeCredentials.setTag("SignIn");
-//        }
-
-
     }
 }

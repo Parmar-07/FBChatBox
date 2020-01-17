@@ -26,13 +26,6 @@ public class CredentialSetup extends BaseFragmentActivity<CredentialPresenter> i
 
     }
 
-  /*  protected void loadFragment(Fragment fragment) {
-
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.credential_container, fragment, fragment.getClass().getSimpleName());
-        transaction.commit();
-
-    }*/
 
     @Override
     protected void viewListeners() {

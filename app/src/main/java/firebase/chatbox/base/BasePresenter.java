@@ -56,7 +56,7 @@ public abstract class BasePresenter {
                     public void accept(Throwable throwable) {
 
                         baseView.onPostNetworkCall();
-                        baseView.popError(throwable.getMessage());
+                        baseView.popMessage(throwable.getMessage());
 
                     }
                 }).subscribe();
@@ -83,7 +83,7 @@ public abstract class BasePresenter {
                     @Override
                     public void accept(Throwable throwable) {
                         baseView.onPostNetworkCall();
-                        baseView.popError(throwable.getMessage());
+                        baseView.popMessage(throwable.getMessage());
                     }
                 }).subscribe();
 
