@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import firebase.chatbox.FBChatBox;
+import firebase.chatbox.R;
 
 public abstract class BaseActivity<presenter extends BasePresenter> extends AppCompatActivity implements BaseView {
 
@@ -50,7 +51,7 @@ public abstract class BaseActivity<presenter extends BasePresenter> extends AppC
 
     @Override
     public void onPreNetworkCall() {
-        progressDialog = new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this, R.style.ProgressBarStyle);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Please Wait");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);

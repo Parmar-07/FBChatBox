@@ -29,21 +29,10 @@
         <item name="android:textSize" >18sp</item>
     </style>
 
-<!--
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:importantForAutofill="no"
-        android:hint="@string/email"
-        android:fontFamily="@font/comfortaa_regular"
-        android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/colorAccent"
-        android:textColorHint="@color/colorAccent"
-        app:layout_constraintEnd_toStartOf="@id/rightMargin"
-        app:layout_constraintStart_toEndOf="@id/leftMargin"
-        app:layout_constraintTop_toBottomOf="@id/lbl_header"
-        tools:ignore="LabelFor,TextFields" />-->
+    <style name="ProgressBarStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
 
 
 </resources>

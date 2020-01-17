@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import firebase.chatbox.FBChatBox;
+import firebase.chatbox.R;
 import firebase.chatbox.data.local.AppCache;
 
 public abstract class BaseFragment<presenter extends BasePresenter> extends Fragment implements BaseView {
@@ -68,7 +69,7 @@ public abstract class BaseFragment<presenter extends BasePresenter> extends Frag
 
     @Override
     public void onPreNetworkCall() {
-        progressDialog = new ProgressDialog(getActivity());
+        progressDialog = new ProgressDialog(getActivity(), R.style.ProgressBarStyle);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Please Wait");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
