@@ -38,7 +38,7 @@ public class SignUpPresenter extends BasePresenter implements SignUpInteractor {
         if (validate(username, email, password))
         {
             view.onPreNetworkCall();
-            credentialRepo.login(email, password, new ResponseListener<Boolean>() {
+            credentialRepo.register(username,email, password, new ResponseListener<Boolean>() {
                 @Override
                 public void onSuccess(Boolean response) {
                     if (response)

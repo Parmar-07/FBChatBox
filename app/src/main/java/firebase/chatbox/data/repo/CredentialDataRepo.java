@@ -21,9 +21,9 @@ import firebase.chatbox.data.network.FireBaseConnector;
 public class CredentialDataRepo extends BaseRepo implements DataRepo.CredentialRepo {
 
 
-    private void cacheUser(FirebaseUser user) {
+    private void cacheUser(FirebaseUser user,String username) {
         if (user != null) {
-            getAppCache().cacheString(AppCache.USER_NAME, user.getDisplayName());
+            getAppCache().cacheString(AppCache.USER_NAME, username.isEmpty()?user.getDisplayName():username);
             getAppCache().cacheString(AppCache.USER_EMAIL, user.getEmail());
             getAppCache().cacheString(AppCache.USER_ID, user.getUid());
             getAppCache().cacheString(AppCache.USER_PROVIDER_ID, user.getProviderId());
@@ -46,7 +46,7 @@ public class CredentialDataRepo extends BaseRepo implements DataRepo.CredentialR
                         if (isSuccess) {
                             AuthResult result = task.getResult();
                             if (result != null) {
-                                cacheUser(result.getUser());
+                                cacheUser(result.getUser(),"");
                             }
                         }
                         responseListener.onSuccess(isSuccess);
@@ -63,7 +63,7 @@ public class CredentialDataRepo extends BaseRepo implements DataRepo.CredentialR
     }
 
     @Override
-    public void register(String username, String email, String password, final ResponseListener<Boolean> responseListener) {
+    public void register(final String username, String email, String password, final ResponseListener<Boolean> responseListener) {
         getFireBase().register(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -93,7 +93,7 @@ public class CredentialDataRepo extends BaseRepo implements DataRepo.CredentialR
                                         public void onComplete(@NonNull Task<Void> task) {
                                             boolean isSuccess = task.isSuccessful();
                                             if (isSuccess) {
-                                                cacheUser(user);
+                                                cacheUser(user,username);
                                             }
                                             responseListener.onSuccess(isSuccess);
                                         }
@@ -110,7 +110,6 @@ public class CredentialDataRepo extends BaseRepo implements DataRepo.CredentialR
 
 
                         }
-                        responseListener.onSuccess(isSuccess);
 
                     }
                 })
