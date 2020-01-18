@@ -20,6 +20,6 @@ public class EmailEditBox extends AppCompatEditText {
 
 
     private void setAttributes(AttributeSet attrs){
-
+// Hi i'm Ajay
     }
 }
